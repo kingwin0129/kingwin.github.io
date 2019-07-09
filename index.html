@@ -239,10 +239,302 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/09/VUE-搭建项目/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kingwin">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/09/VUE-搭建项目/" itemprop="url">VUE 搭建项目</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-09T10:39:00+08:00">
+                2019-07-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="VUE-3-x项目搭建"><a href="#VUE-3-x项目搭建" class="headerlink" title="VUE 3.x项目搭建"></a>VUE 3.x项目搭建</h1><p>自己看了很多遍VUE项目的各种搭建，但是时间久了就会忘记。所以特地从头到尾写一遍流程~ 好记性不如烂笔头！</p>
+<h2 id="准备环境"><a href="#准备环境" class="headerlink" title="准备环境"></a>准备环境</h2><h3 id="1-NodeJs-环境"><a href="#1-NodeJs-环境" class="headerlink" title="1.NodeJs 环境"></a>1.NodeJs 环境</h3><p>官网下载链接:  <link><a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">https://nodejs.org/en/download/</a> </p>
+<p>安装后查看版本，从而得知是否安装成功</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
+<p>如果出现对应的版本号，说明你已经成功了！</p>
+<!--[](\images\vue\l1.png)-->
+<p><img src="\images\vue\l1.png" align="left" style=" width:300px;height:100 px"> </p>
+<p><br><br><br><br><br></p>
+<h3 id="2-Vue-cli-环境"><a href="#2-Vue-cli-环境" class="headerlink" title="2.Vue-cli 环境"></a>2.Vue-cli 环境</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @vue/cli</span><br></pre></td></tr></table></figure>
+<p>和node一样检查版本号，如果出现说明你已成功安装!</p>
+<p><img src="\images\vue\l2.png" align="left" style=" width:300px;height:100 px"> </p>
+<p><br><br><br><br><br></p>
+<h3 id="3-Vue-cli-创建项目"><a href="#3-Vue-cli-创建项目" class="headerlink" title="3.Vue-cli 创建项目"></a>3.Vue-cli 创建项目</h3><p>help命令：</p>
+<p><img src="\images\vue\l4.png" align="left"> </p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p>进入要创建项目的路径下运行命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue create project-name</span><br></pre></td></tr></table></figure></p>
+<p>首先会让你选择你配置文件</p>
+<p><img src="\images\vue\l3.png" align="left"> </p>
+<p><br><br><br><br><br><br><br><br><br><br><br></p>
+<p>运行命令后会出现对应的选择配置 分别为：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Babel —— ES6转换器</span><br><span class="line">这个是解析我们es6的代码的，因为对于一些低版本的ie浏览器，还不能识别es6代码，那么vue里面好多要去写es6的代码，这个时候我们就可以用babel这个工具将es6的代码转译成浏览器能识别的代码。</span><br><span class="line">TypeScript —— 使用JS的超类语言TS</span><br><span class="line">Progressive Web App Support —— PWA单页应用</span><br><span class="line">Router —— 使用路由管理器</span><br><span class="line">Vuex —— 使用 vue 状态管理器</span><br><span class="line">CSS Pre-processors —— CSS预处理</span><br><span class="line">Linter / Formatter —— Eslint 安装</span><br><span class="line">Unit Testing —— 单元测试</span><br><span class="line">E2E Testing —— 单元测试</span><br></pre></td></tr></table></figure></p>
+<p>1.是否使用class风格的组件语法, 选择 yes</p>
+<p><img src="\images\vue\l5.png" align="left"> </p>
+<p><br><br><br><br><br></p>
+<p>2.是否使用babel做转义， 选择 yes</p>
+<p><img src="\images\vue\l6.png" align="left"> </p>
+<p><br><br><br><br><br></p>
+<p>3.是否使用路由的 history模式，选择 yes</p>
+<p><img src="\images\vue\l7.png" align="left"> </p>
+<p><br><br><br><br><br></p>
+<p>4.选择css预处理器，请根据个人情况进行选择</p>
+<p><img src="\images\vue\l8.png" align="left"> </p>
+<p><br><br><br><br><br></p>
+<p>5.选择 Eslint 的使用方式，我选择的 第二项</p>
+<p><img src="\images\vue\l9.png" align="left"> </p>
+<p><br><br><br><br><br></p>
+<p>6.是否把以上的选择作为将来下个项目的模板进行保存，我选择的第一项 Lint on save.</p>
+<p><img src="\images\vue\l10.png" align="left"> </p>
+<p><br><br><br><br><br></p>
+<p>7.单元测试，我选择使用 Jest</p>
+<p><img src="\images\vue\l11.png" align="left"> </p>
+<p><br><br><br><br><br></p>
+<p>8.选择E2E测试解决方案，我选择使用 Nightwatch.</p>
+<p><img src="\images\vue\l12.png" align="left"> </p>
+<p><br><br><br><br><br></p>
+<p>9.选择以上的配置文件放置的位置，一般选择第一项，单独配置。</p>
+<p><img src="\images\vue\l13.png" align="left"> </p>
+<p><br><br><br><br><br></p>
+<p>10.是否保存以上的 preset 配置，可在将来创建项目的时候直接引用，我选择Yes.</p>
+<p><img src="\images\vue\l14.png" align="left"> </p>
+<p><br><br><br><br><br></p>
+<p>然后需要输入preset配置保存的文件名称：</p>
+<p><img src="\images\vue\l15.png" align="left"> </p>
+<p><br><br><br><br><br></p>
+<p>到此所有的配置项就选择完成了，点击回车，开始创建项目。<br><br><br><br><br><br></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/28/ss/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kingwin">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/05/28/ss/" itemprop="url">contact</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-28T18:03:42+08:00">
+                2019-05-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="联系方式：kingwin"><a href="#联系方式：kingwin" class="headerlink" title="联系方式：kingwin"></a>联系方式：kingwin</h1>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/28/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="Kingwin">
       <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -270,7 +562,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-28T12:22:20+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-28T12:22:00+08:00">
                 2019-05-28
               </time>
             
@@ -370,7 +662,7 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/28/Welcome-to-Kblog/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="Kingwin">
       <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -511,7 +803,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-author-name" itemprop="name">Kingwin</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
@@ -522,7 +814,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -530,6 +822,15 @@
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
             
 
           </nav>
@@ -567,7 +868,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">Kingwin</span>
 
   
 </div>
@@ -581,7 +882,7 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://www.baidu.com">NexT.Muse</a> v5.1.4</div>
 
 
 
